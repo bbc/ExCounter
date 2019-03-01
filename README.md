@@ -1,6 +1,14 @@
 # ExCounter
 
-**TODO: Add description**
+A library that dynamically spins up a process given a name of a counter, and keeps the count.
+
+Optionally a config value of `lifetime_ms` can be given to kill and restart the counter. If not provided, then the process will carry on counting until it crashes.
+
+## Usage
+To increment by 1:
+`ExCounter.increment(:web_responses_500)`
+or to increment by multiple
+`ExCounter.increment(:web_responses_500, 4)`
 
 ## Installation
 
