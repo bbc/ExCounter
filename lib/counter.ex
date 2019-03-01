@@ -36,7 +36,7 @@ defmodule ExCounter.Counter do
 
   defp terminate_after? do
     case counter_lifetime() do
-      0 -> Logger.info "Starting process indefinitely."
+      0 -> Logger.info("Starting process indefinitely.")
       lifetime -> terminate(lifetime)
     end
   end

@@ -19,10 +19,12 @@ defmodule Test.CounterSupervisor do
   end
 
   test "spins up multiple processes" do
-    for value <- 0..30 do ExCounter.increment(:"counter_#{value}") end
+    for value <- 0..30 do
+      ExCounter.increment(:"counter_#{value}")
+    end
 
     # `>=` is a cheat for not tearing down the previous started
     # processes in this test suite
-    assert ExCounter.CounterSupervisor.process_count >= 31
+    assert ExCounter.CounterSupervisor.process_count() >= 31
   end
 end
