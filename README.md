@@ -1,6 +1,6 @@
 # ExCounter
 
-A library that dynamically spins up a process given a name of a counter, and keeps the count.
+A library that dynamically spins up a process given a name of a counter, and keeps a count that can be incremented and queried.
 
 Optionally a config value of `lifetime_ms` can be given to kill and restart the counter. If not provided, then the process will carry on counting until it crashes.
 
